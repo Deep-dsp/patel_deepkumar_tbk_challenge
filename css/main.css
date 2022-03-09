@@ -225,10 +225,10 @@ button:focus {
   content: "";
 }
 .terms-condition .checkbox input[type=checkbox]:focus + label::before {
-  outline: #3b99fc auto 5px;
+  outline: 3px solid skyblue;
 }
 
-.main-container {
+.bg-container {
   position: relative;
   width: 100vw;
   height: 100vh;

@@ -34,9 +34,13 @@
       outline-offset: 10px;
       margin: 170px auto;
 
-      @media(max-width:1440px)            
+      @media (max-width:1440px)            
       {
          width: 80%;
+      }
+
+      @media (max-width: 768px){
+         margin: 85px auto;
       }
    }
 }

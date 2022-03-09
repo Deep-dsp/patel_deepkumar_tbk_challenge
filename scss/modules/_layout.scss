@@ -1,0 +1,352 @@
+// Main Container with BG
+.main-container{
+   position: relative;
+   width: 100vw;
+   height: 100vh;
+   background: url(/īmages/bg.jpg) no-repeat;
+   background-size: cover; 
+}
+
+// Modal
+#modal{
+   overflow-x: hidden;
+   overflow-y: scroll;
+   width: 100%;
+
+   position: fixed;
+   top: -150%;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   opacity: 0;
+   transition: all 0.5s ease;
+   -webkit-transition: all 0.5s ease;
+   -moz-transition: all 0.5s ease;
+   -ms-transition: all 0.5s ease;
+   -o-transition: all 0.5s ease;
+
+   .modal-content-container{
+      position: relative;
+      max-width: 1300px;
+      width: 100%;
+      outline: 1px solid $white;
+      background-color: white;
+      outline-offset: 10px;
+      margin: 170px auto;
+
+      @media(max-width:1440px)            
+      {
+         width: 80%;
+      }
+   }
+}
+
+.close-button{
+
+   button{
+      padding: 1.875rem 1.875rem 1.9375rem 1.875rem;
+
+      @media (max-width: 1200px) {
+         padding: 0.9375rem 0.9375rem 1rem 0.9375rem;
+      }
+   }
+
+   i{
+      width: 12px;
+      height: auto;
+      color: $red;
+   }
+}
+
+.title-block{
+   max-width: 330px;
+   margin: 0 auto;
+   .launch-text{
+      padding: 1rem 0;
+      line-height: 47px;
+
+      @media (max-width: 1200px) {
+         padding: 0.5rem 0;
+      }
+
+      @media (max-width:992px){
+         line-height: 28px;
+      }
+   }
+
+   .of-the{
+      font-style: italic;
+      line-height: 80px;
+
+      @media (max-width: 1200px) {
+         line-height: 50px;
+      }
+   }
+
+   .main-title{
+      padding-top: 16px;
+
+      @media (max-width: 1200px) {
+         padding-top: 8px;
+      }
+   }
+}
+
+.info-block{
+   .para{
+      max-width: 960px;
+      line-height: 40px;
+      margin: 0 auto;
+      padding-top: 90px;
+
+      @media (max-width: 1200px) {
+         padding-top: 40px;
+      }
+
+      @media (max-width:992px){
+         line-height: 32px;
+      }
+   }
+
+   .divider{
+      width: 160px;
+      margin: 55px auto;
+      height: 2px;
+      background-color: $red-divider;
+
+      @media (max-width: 1200px) {
+         margin: 2.5rem auto;
+      }
+   }
+
+   .list-title{
+      letter-spacing: 2px;
+   }
+   
+   .list-container{
+      max-width: 650px;
+      margin: 0 auto;
+      padding: 3.125rem 0 6.125rem 0;
+      list-style: none;
+
+      @media (max-width: 1200px) {
+         padding: 25px 0 3.0625rem 0;
+      }
+
+      li:not(:last-child){
+         margin-bottom: 12px;
+
+         @media (max-width: 1200px) {
+            margin-bottom: 8px;
+         }
+      }
+
+      li{
+         margin: 0;
+         padding-left: 1.25em;
+         position: relative;
+         &:after {
+            content: '';
+            height: .25em;
+            width: .25em;
+            background: #D2153A;
+            display: block;
+            position: absolute;
+            transform: rotate(45deg);
+            top: .555em;
+            left: 0;
+            }
+      }
+   }
+}
+
+// Form Styling
+.form-container{
+   background-color: $red;
+   padding: 6.1875rem 0 9.3125rem 0;
+
+   @media (max-width: 1200px) {
+      padding: 3.0625rem 0 4.6875rem 0;
+   }
+
+   form{
+      margin: 1.8125rem 0;
+      @media (max-width: 992px){
+         flex-direction: column;
+         align-items: center;
+      }
+   }
+
+   .sub-title{
+      margin-top: -8px;
+   }
+
+   // Label Animation
+   .input-group{
+      position: relative;
+
+      label{
+         position: absolute;
+         color: $black;
+         top: 50%;
+         left: 20px;
+         transform: translate(0, -50%);
+         transition: all 0.5s ease;
+         -webkit-transition: all 0.5s ease;
+         -moz-transition: all 0.5s ease;
+         -ms-transition: all 0.5s ease;
+         -o-transition: all 0.5s ease;
+      }
+
+      @media (max-width: 992px){
+         margin-bottom: 12px;
+      }
+
+      @media (min-width: 769px){
+         input[type="email"]{
+            margin: 0 0.625rem;
+         }
+      }
+
+      input[type="text"],
+      input[type="email"]{
+         max-width: 270px;
+         padding: 1.375rem 0 1.375rem 1.25rem;
+         outline: none;
+
+         &:focus{
+            outline: 3px solid skyblue;
+         }
+
+         @media (max-width: 992px){
+            max-width: 100%;
+            width: 70vw;
+         }
+      }
+   }
+
+   button[type="submit"]{
+      font-family: auto;
+      background: $black;
+      padding: 0 1.875rem;
+
+      @media (max-width: 992px){
+         padding: 1.375rem 1.875rem;
+      }
+   }
+
+   // Checkbox
+   .terms-condition{
+      max-width: 600px;
+      margin: 0 auto;
+   }
+}
+
+// Floating elements - Rectangles
+.modal-content{
+   position: relative;
+   z-index: 1;
+   // top reactanlge
+   .top-react, 
+   .bottom-react{
+      border: 10px solid $rect-color;
+      transform: translate(-50%, 0);
+      -webkit-transform: translate(-50%, 0);
+      -moz-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+      -o-transform: translate(-50%, 0);
+
+      @media (max-width: 768px){
+         border: 6px solid $rect-color;
+      }
+   }
+
+   .top-react{
+      position: absolute;
+      top: -40px;
+      left: 50%;
+      width: 142px;
+      height: 695px;
+      z-index: -1;
+
+      @media (max-width: 1200px){
+         height: 600px;
+      }
+
+      @media (max-width: 992px){
+         height: 518px;
+      }
+
+      @media (max-width: 768px){
+         height: 465px;
+      }
+
+      @media (max-width: 576px){
+         height: 350px;
+      }
+   }
+
+   .bottom-react{
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      width: 142px;
+      height: 90px;
+      // z-index: -1;
+
+      @media (max-width: 768px){
+         bottom: -42px;
+         height: 70px;
+      }
+   }
+}
+
+// Floating Elements - chisle and shave
+.wood-shave{
+   position: absolute;
+   right: -9%;
+   // top: 5%;
+   margin-top: 128px;
+   z-index: 5;
+
+   @media (max-width: 1200px){
+      right: -155px;
+      img{
+         width: 50%;
+      }
+   }
+
+   @media (max-width: 576px){
+      img{
+         width: 30%;
+      }
+   }
+}
+
+.chisle{
+   position: absolute;
+   left: -35%;
+   bottom: 128px;
+   z-index: 5;
+
+   @media (max-width: 1920px){
+      left: -24%;
+      img{
+         width: 70%;
+      }
+   }
+
+   @media (max-width: 1440px){
+      left: -315px;
+   }
+
+}
+
+// Modal - open css
+.open-modal{
+   top: 0 !important;
+   opacity: 1 !important;
+}
+
+
+

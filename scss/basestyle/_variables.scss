@@ -1,0 +1,118 @@
+// --------------- Font Family -------------------
+
+$futura-pt: 'Futura PT Book';
+
+// --------------- Font Family [ Finished ]-------------------
+
+
+// ---------------- font-sizes Desktop -------------------------
+
+// About Comapny Block
+$basic-font-size: 1rem;
+// $font-21: 1.75rem; //28px
+// $font-23: 1.9169rem; //30.67px
+// $font-70: 5.8331rem; // 93.33px
+// $font-24: 2rem; //32px
+$font-21: $basic-font-size * 1.75; 
+$font-23: $basic-font-size * 1.9169; 
+$font-70: $basic-font-size * 5.8331; 
+$font-24: $basic-font-size * 2; 
+
+// Form
+$font-32: 2.6669rem; //42.67px
+$font-15: 1.25rem; //20px
+
+
+// ---------------- font-sizes Desktop [ FINISHED ]-------------------------
+
+// ---------------- Colors -------------------------
+$red: #9f173d;
+$red-divider: #c40045;
+$white: #fff;
+$black: #000;
+$rect-color: #f5f5f5;
+
+// Classes
+.font-21{
+   font-size: $font-21;
+
+   @media (max-width: 768px) {
+      font-size: $font-15;
+   }
+
+   @media (max-width: 576px) {
+      font-size: $basic-font-size;
+   }
+}
+
+.font-23{
+   font-size: $font-23;
+
+   @media (max-width: 768px) {
+      font-size: $font-21;
+   }
+
+   @media (max-width: 576px) {
+      font-size: $font-15;
+   }
+}
+
+.font-70{
+   font-size: $font-70;
+
+   @media (max-width: 992px) {
+      font-size: 5rem;
+   }
+
+   @media (max-width: 768px) {
+      font-size: 4rem;
+   }
+   @media (max-width: 576px) {
+      font-size: $font-24;
+   }
+}
+
+.font-24{
+   font-size: $font-24;
+
+   @media (max-width: 768px) {
+      font-size: $font-23;
+   }
+
+   @media (max-width: 576px) {
+      font-size: $font-21;
+   }
+}
+
+.font-32{
+   font-size: $font-32;
+
+   @media (max-width: 768px) {
+      font-size: $font-24;
+   }
+
+   @media (max-width: 576px) {
+      font-size: $font-21;
+   }
+}
+
+.font-15{
+   font-size: $font-15;
+}
+
+// font-family
+.futura-pt{
+   font-family: $futura-pt;
+}
+
+.red{
+   color: $red;
+}
+
+.red-divider{
+   color: $red-divider;
+}
+
+.white{
+   color: white;
+}

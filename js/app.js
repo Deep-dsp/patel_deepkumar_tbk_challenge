@@ -23,6 +23,9 @@ jQuery(function($){
    // Close Modal
    function closeModal(){
       modal.removeClass("open-modal");
+      setTimeout(() => {
+         modal.addClass('d-none');
+      }, 2000);
       clearInterval(interval);
       // save the value in localstorage
       localStorage.setItem("restrict_modal", 'true');

@@ -429,11 +429,6 @@ button:focus {
     margin-bottom: 12px;
   }
 }
-@media (min-width: 769px) {
-  .form-container .input-group input[type=email] {
-    margin: 0 0.625rem;
-  }
-}
 .form-container .input-group input[type=text],
 .form-container .input-group input[type=email] {
   max-width: 270px;
@@ -449,6 +444,11 @@ button:focus {
 .form-container .input-group input[type=email] {
     max-width: 100%;
     width: 70vw;
+  }
+}
+@media (min-width: 769px) {
+  .form-container .email-margin {
+    margin: 0 0.625rem;
   }
 }
 .form-container button[type=submit] {

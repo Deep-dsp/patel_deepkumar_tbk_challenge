@@ -56,17 +56,12 @@ jQuery(function($){
       }
     });
 
-
-   //  Main visuals scroll
-   var position = modal.scrollTop(); 
-
    // should start at 0
-
    modal.scroll(function() {
       var scroll = modal.scrollTop();
       
       shave.css({
-         'top': scroll
+         'top': scroll < 128 ? '' : scroll
       })
 
       chisle.css({

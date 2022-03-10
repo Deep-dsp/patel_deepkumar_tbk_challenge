@@ -530,8 +530,13 @@ button:focus {
 .wood-shave {
   position: absolute;
   right: -9%;
-  margin-top: 128px;
+  top: 128px;
   z-index: 5;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
 }
 @media (max-width: 1200px) {
   .wood-shave {
@@ -552,6 +557,11 @@ button:focus {
   left: -35%;
   bottom: 128px;
   z-index: 5;
+  transition: all 0.1s ease;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
 }
 @media (max-width: 1920px) {
   .chisle {
